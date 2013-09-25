@@ -1,15 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace TicTacToe
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        Board board1 = new Board();
+        board1.drawBoard();
+
+        Player player1 = new Player("X");
+        int xpos, ypos;
+
+        do
         {
-        }
+            ypos = player1.inputY();
+            xpos = player1.inputX();
+            board1.place(xpos, ypos);
+            board1.drawBoard();
+        } while (ypos != 9);
+
     }
 }
+
