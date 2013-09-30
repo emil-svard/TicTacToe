@@ -1,23 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-class Program
-{
-    static void Main()
+    class Program
     {
-        Board board1 = new Board();
-        board1.drawBoard();
-
-        Player player1 = new Player("X");
-        int xpos, ypos;
-
-        do
+        static void Main()
         {
-            ypos = player1.inputY();
-            xpos = player1.inputX();
-            board1.place(xpos, ypos);
-            board1.drawBoard();
-        } while (ypos != 9);
+           Board b = new Board();
 
+            b.board();
+
+
+
+        }
     }
-}
 
