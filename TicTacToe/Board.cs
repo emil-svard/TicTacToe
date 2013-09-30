@@ -38,11 +38,29 @@ class Board
                     if (i >= 4)
                     {
                         Console.WriteLine("ITS A DRAW");
-                        Environment.Exit(0);   
+                        Console.WriteLine("Do you wish to play again Y/N?");
+                        string svar = Console.ReadLine();
+                        if (svar == "Y")
+                        {
+                            p.startagain();
+                            i = 0;
+                        }
+                        else
+                        {
+
+                            Console.WriteLine("Thanks for playing!");
+                            Environment.Exit(0);
+
+                        }
                     }
                 }
-
                 if (p.turn == true)
+                {
+                    p.bot();
+                    p.Win2();
+                }
+
+                /*if (p.turn == true)
                 {
 
                     p.plays2();
@@ -55,9 +73,22 @@ class Board
                     if (i >= 4)
                     {
                         Console.WriteLine("ITS A DRAW");
-                        Environment.Exit(0);
+                        Console.WriteLine("Do you wish to play again Y/N?");
+                        string svar = Console.ReadLine();
+                        if (svar == "Y")
+                        {
+                            p.startagain();
+                            i = 0;
+                        }
+                        else
+                        {
+                            
+                                Console.WriteLine("Thanks for playing!");
+                                Environment.Exit(0);
+                            
+                        }
                     }
-           }    
+           }    */
         }
       }
     }
