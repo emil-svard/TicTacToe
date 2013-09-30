@@ -135,35 +135,7 @@ class player
                 Console.WriteLine("────────────────────────────");
                 Console.WriteLine("select which one to O");
 
-                if (board[0] == "X")
-                {
-                    board[1] = "O";
-                    turn = false;
-                    break;
-                }
-
                 
-                if (board[2] == "X")
-                {
-                    board[1] = "O";
-                    turn = false;
-                    break;
-                    
-                }
-                if (board[3] == "X")
-                {
-                    board[2] = "O";
-                    turn = false;
-                    break;
-
-                }
-                if (board[8] == "X")
-                {
-                    board[7] = "O";
-                    turn = false;
-                    break;
-
-                }
                 
 
             }

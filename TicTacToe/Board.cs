@@ -54,13 +54,13 @@ class Board
                         }
                     }
                 }
-                if (p.turn == true)
+                /*if (p.turn == true)
                 {
                     p.bot();
                     p.Win2();
-                }
+                }*/
 
-                /*if (p.turn == true)
+                if (p.turn == true)
                 {
 
                     p.plays2();
@@ -88,7 +88,7 @@ class Board
                             
                         }
                     }
-           }    */
+           }    
         }
       }
     }
