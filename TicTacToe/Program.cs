@@ -10,7 +10,7 @@ using System.Threading.Tasks;
         {
            Board b = new Board();
 
-            b.board();
+            b.played();
 
 
 

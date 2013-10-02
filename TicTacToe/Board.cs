@@ -7,14 +7,32 @@ using System.Threading.Tasks;
 
 class Board
 {
-
+    public List<string> board = new List<string> { " ", " ", " ", " ", " ", " ", " ", " ", " " };
     public string turn = "player1";
-    public void board()
+    static player p = new player();
+
+    public void Theboard()
+    {
+
+        Console.WriteLine("\n");
+        Console.WriteLine(board[0] + "│" + board[1] + "│" + board[2]);
+        Console.WriteLine("─┼─┼─");
+        Console.WriteLine(board[3] + "│" + board[4] + "│" + board[5]);
+        Console.WriteLine("─┼─┼─");
+        Console.WriteLine(board[6] + "│" + board[7] + "│" + board[8]);
+        Console.WriteLine("────────────────────────────");
+        
+        
+
+    }
+
+    public void played()
     {
         Console.BackgroundColor = ConsoleColor.White;
         Console.ForegroundColor = ConsoleColor.Black;
-        List<string> board = new List<string> { "1", "2", "3", "4", "5", "6", "7", "8", "9" }; //useless atm
-        player p = new player();
+        
+        
+
         Console.Clear();
         Console.WriteLine("Please enter name of first player");
         p.player1 = Console.ReadLine();
@@ -24,10 +42,11 @@ class Board
 
             for (int i = 0; i <= 9; i++)
             {
-
+                
                 if (p.turn == false)
                 {
-
+                    
+                    
                     p.plays1();
                     p.Win();
                     if (p.playagain == true)
@@ -54,17 +73,15 @@ class Board
                         }
                     }
                 }
-                /*if (p.turn == true)
-                {
-                    p.bot();
-                    p.Win2();
-                }*/
 
                 if (p.turn == true)
                 {
 
+           
                     p.plays2();
-                    p.Win2();
+                    
+                    p.Win();
+                    
                     if (p.playagain == true)
                     {
                         p.startagain();
