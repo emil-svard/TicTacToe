@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 class Board
 {
     public List<string> board = new List<string> { " ", " ", " ", " ", " ", " ", " ", " ", " " };
-    public string turn = "player1";
     static player p = new player();
+    
 
     public void Theboard()
     {
@@ -25,6 +25,20 @@ class Board
         
 
     }
+    public void startagain()
+    {
+        board[0] = " ";
+        board[1] = " ";
+        board[2] = " ";
+        board[3] = " ";
+        board[4] = " ";
+        board[5] = " ";
+        board[6] = " ";
+        board[7] = " ";
+        board[8] = " ";
+        p.turn = false;
+        p.TurnWithBot = false;
+    }
 
     public void played()
     {
@@ -34,78 +48,68 @@ class Board
         
 
         Console.Clear();
+        Console.WriteLine("Do you wish to go against a Player or a Bot");
+        Console.WriteLine("1: Player");
+        Console.WriteLine("2: Bot");
+        p.against = Console.ReadLine();
+        Console.Clear();
         Console.WriteLine("Please enter name of first player");
         p.player1 = Console.ReadLine();
-        Console.WriteLine("Please enter name of secound player");
-        p.player2 = Console.ReadLine();
-        
+        if (p.against == "1")
+        {
+            Console.WriteLine("Please enter name of secound player");
+            p.player2 = Console.ReadLine();
+        }
+    
 
-            for (int i = 0; i <= 9; i++)
+           for (int i = 0; i <= 10; i++)
             {
-                
-                if (p.turn == false)
+
+                if (p.turn == false || p.TurnWithBot == false)
                 {
-                    
-                    
+
+              
                     p.plays1();
+                    
                     p.Win();
-                    if (p.playagain == true)
+
+                    if (i >= 5)
                     {
-                        p.startagain();
                         i = 0;
+                        p.drawtext();
                     }
-                    if (i >= 4)
+                    
+                }
+
+                if (p.turn == true & p.against == "1")
+                {
+
+
+                    p.plays2();
+
+                    p.Win(); //doesnt reset all
+
+                    if (i >= 5)
                     {
-                        Console.WriteLine("ITS A DRAW");
-                        Console.WriteLine("Do you wish to play again Y/N?");
-                        string svar = Console.ReadLine();
-                        if (svar == "Y")
-                        {
-                            p.startagain();
-                            i = 0;
-                        }
-                        else
-                        {
-
-                            Console.WriteLine("Thanks for playing!");
-                            Environment.Exit(0);
-
-                        }
+                        i = 0;
+                        p.drawtext();
                     }
                 }
 
-                if (p.turn == true)
+                if (p.TurnWithBot == true & p.against == "2")
                 {
 
-           
-                    p.plays2();
-                    
+
+                    p.bot1();
+
                     p.Win();
-                    
-                    if (p.playagain == true)
+
+                    if (i >= 5)
                     {
-                        p.startagain();
                         i = 0;
-                    }
-                    if (i >= 4)
-                    {
-                        Console.WriteLine("ITS A DRAW");
-                        Console.WriteLine("Do you wish to play again Y/N?");
-                        string svar = Console.ReadLine();
-                        if (svar == "Y")
-                        {
-                            p.startagain();
-                            i = 0;
-                        }
-                        else
-                        {
-                            
-                                Console.WriteLine("Thanks for playing!");
-                                Environment.Exit(0);
-                            
-                        }
-                    }
-           }    
+                        p.drawtext();
+                    }   
+         } 
         }
       }
     }
