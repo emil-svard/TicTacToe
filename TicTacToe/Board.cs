@@ -62,7 +62,7 @@ class Board
         }
     
 
-           for (int i = 0; i <= 10; i++)
+           for (int i = 0; i <= 9; i++)
             {
 
                 if (p.turn == false || p.TurnWithBot == false)
@@ -70,13 +70,15 @@ class Board
 
               
                     p.plays1();
-                    
-                    p.Win();
 
-                    if (i >= 5)
+                    if (p.Win() == true)
                     {
                         i = 0;
-                        p.drawtext();
+                    }
+
+                    if (p.Draw() == true)
+                    {
+                        i = 0;
                     }
                     
                 }
@@ -87,12 +89,14 @@ class Board
 
                     p.plays2();
 
-                    p.Win(); //doesnt reset all
-
-                    if (i >= 5)
+                    if (p.Win() == true)
                     {
                         i = 0;
-                        p.drawtext();
+                    }
+
+                    if (p.Draw() == true)
+                    {
+                        i = 0;
                     }
                 }
 
@@ -102,13 +106,15 @@ class Board
 
                     p.bot1();
 
-                    p.Win();
-
-                    if (i >= 5)
+                    if (p.Win() == true)
                     {
                         i = 0;
-                        p.drawtext();
-                    }   
+                    }
+                    if (p.Draw() == true)
+                    {
+                        i = 0;
+                    }
+                    
          } 
         }
       }
