@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 class Board
 {
-    public List<string> board = new List<string> { " ", " ", " ", " ", " ", " ", " ", " ", " " };
+   
+    public List<string> board = new List<string> { " ", " ", " ", " ", " ", " ", " ", " ", " " }; //Group didnt want to do in FORMS
     static player p = new player();
     
 
@@ -60,26 +61,27 @@ class Board
             Console.WriteLine("Please enter name of secound player");
             p.player2 = Console.ReadLine();
         }
-    
 
-           for (int i = 0; i <= 9; i++)
-            {
 
+        while (true)
+        {
+            
+        
                 if (p.turn == false || p.TurnWithBot == false)
                 {
 
               
                     p.plays1();
 
-                    if (p.Win() == true)
-                    {
-                        i = 0;
-                    }
+                    p.Win();
+                    
+                        
+                    
 
-                    if (p.Draw() == true)
-                    {
-                        i = 0;
-                    }
+                    p.Draw();
+                    
+                        
+                    
                     
                 }
 
@@ -89,15 +91,15 @@ class Board
 
                     p.plays2();
 
-                    if (p.Win() == true)
-                    {
-                        i = 0;
-                    }
+                    p.Win();
+                    
+                        
+                    
 
-                    if (p.Draw() == true)
-                    {
-                        i = 0;
-                    }
+                    p.Draw();
+                    
+                        
+                    
                 }
 
                 if (p.TurnWithBot == true & p.against == "2")
@@ -106,16 +108,15 @@ class Board
 
                     p.bot1();
 
-                    if (p.Win() == true)
-                    {
-                        i = 0;
-                    }
-                    if (p.Draw() == true)
-                    {
-                        i = 0;
-                    }
+                    p.Win();
+
+
+
+                    p.Draw();
                     
-         } 
+
+                    
+                }
         }
       }
     }
