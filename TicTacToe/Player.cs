@@ -237,21 +237,9 @@ class player
                         break;
                     }
 
+                    //NEW 
 
-
-                    //NEW
-                    if (b.board[0] == "X" & b.board[1] == "X" & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
-                    {
-                        b.board[2] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-                    if (b.board[0] == " " & b.board[1] == "X" & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
+                    if (b.board[0] == "" & b.board[1] == "O" & b.board[2] == "O")
                     {
                         b.board[0] = "O";
                         legit = true;
@@ -259,9 +247,31 @@ class player
                         break;
                     }
 
-                    if (b.board[0] == "X" & b.board[1] == " " & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
+                    if (b.board[0] == "" & b.board[1] == "X" & b.board[2] == "X")
+                    {
+                        b.board[0] = "O";
+                        legit = true;
+                        TurnWithBot = false;
+                        break;
+                    }
+
+                    if (b.board[0] == "O" & b.board[1] == "O" & b.board[2] == " ")
+                    {
+                        b.board[2] = "O";
+                        legit = true;
+                        TurnWithBot = false;
+                        break;
+                    }
+
+                    if (b.board[0] == "X" & b.board[1] == "X" & b.board[2] == " ")
+                    {
+                        b.board[2] = "O";
+                        legit = true;
+                        TurnWithBot = false;
+                        break;
+                    }
+
+                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == "O")
                     {
                         b.board[1] = "O";
                         legit = true;
@@ -269,49 +279,15 @@ class player
                         break;
                     }
 
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == "X" & b.board[8] == " ")
+                    if (b.board[0] == "X" & b.board[1] == " " & b.board[2] == "X")
                     {
-                        b.board[8] = "O";
+                        b.board[1] = "O";
                         legit = true;
                         TurnWithBot = false;
                         break;
                     }
 
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == "X" & b.board[8] == "X")
-                    {
-                        b.board[6] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == " " & b.board[8] == "X")
-                    {
-                        b.board[7] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "X" & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == "X" & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
-                    {
-                        b.board[6] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "X" & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == " " & b.board[8] == " ")
+                    if (b.board[3] == " " & b.board[4] == "O" & b.board[5] == "O")
                     {
                         b.board[3] = "O";
                         legit = true;
@@ -319,9 +295,15 @@ class player
                         break;
                     }
 
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == "X")
+                    if (b.board[3] == " " & b.board[4] == "X" & b.board[5] == "X")
+                    {
+                        b.board[3] = "O";
+                        legit = true;
+                        TurnWithBot = false;
+                        break;
+                    }
+
+                    if (b.board[3] == "O" & b.board[4] == "O" & b.board[5] == " ")
                     {
                         b.board[5] = "O";
                         legit = true;
@@ -329,99 +311,7 @@ class player
                         break;
                     }
 
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == "X" & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == " " & b.board[8] == " ")
-                    {
-                        b.board[0] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "X" &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == "X")
-                    {
-                        b.board[2] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == "X" & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "X" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
-                    {
-                        b.board[7] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "X" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == "X" & b.board[8] == " ")
-                    {
-                        b.board[1] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "X" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
-                    {
-                        b.board[6] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "X" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == " " & b.board[8] == " ")
-                    {
-                        b.board[2] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "X" &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
-                    {
-                        b.board[8] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "X" &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == "X")
-                    {
-                        b.board[2] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == "X")
-                    {
-                        b.board[0] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == "X" & b.board[4] == "X" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
+                    if (b.board[3] == "X" & b.board[4] == "X" & b.board[5] == " ")
                     {
                         b.board[5] = "O";
                         legit = true;
@@ -429,29 +319,23 @@ class player
                         break;
                     }
 
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "X" & b.board[5] == "X" &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
+                    if (b.board[3] == "O" & b.board[4] == " " & b.board[5] == "O")
                     {
-                        b.board[3] = "O";
+                        b.board[4] = "O";
                         legit = true;
                         TurnWithBot = false;
                         break;
                     }
 
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == "X" & b.board[8] == " ")
+                    if (b.board[3] == "X" & b.board[4] == " " & b.board[5] == "X")
                     {
-                        b.board[8] = "O";
+                        b.board[4] = "O";
                         legit = true;
                         TurnWithBot = false;
                         break;
                     }
 
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == "X" & b.board[8] == "X")
+                    if (b.board[6] == " " & b.board[7] == "O" & b.board[8] == "O")
                     {
                         b.board[6] = "O";
                         legit = true;
@@ -459,23 +343,7 @@ class player
                         break;
                     }
 
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == " " & b.board[8] == "X")
-                    {
-                        b.board[7] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-
-
-
-                    // NEWWWW
-                    if (b.board[0] == "X" & b.board[1] == "X" & b.board[2] == "O" &
-                        b.board[3] == "X" & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
+                    if (b.board[6] == " " & b.board[7] == "X" & b.board[8] == "X")
                     {
                         b.board[6] = "O";
                         legit = true;
@@ -483,9 +351,7 @@ class player
                         break;
                     }
 
-                    if (b.board[0] == "O" & b.board[1] == "X" & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "X" &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
+                    if (b.board[6] == "O" & b.board[7] == "O" & b.board[8] == " ")
                     {
                         b.board[8] = "O";
                         legit = true;
@@ -493,9 +359,15 @@ class player
                         break;
                     }
 
-                    if (b.board[0] == "X" & b.board[1] == "O" & b.board[2] == "X" &
-                        b.board[3] == "X" & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
+                    if (b.board[6] == "X" & b.board[7] == "X" & b.board[8] == " ")
+                    {
+                        b.board[8] = "O";
+                        legit = true;
+                        TurnWithBot = false;
+                        break;
+                    }
+
+                    if (b.board[6] == "O" & b.board[7] == " " & b.board[8] == "O")
                     {
                         b.board[7] = "O";
                         legit = true;
@@ -503,10 +375,15 @@ class player
                         break;
                     }
 
+                    if (b.board[6] == "X" & b.board[7] == " " & b.board[8] == "X")
+                    {
+                        b.board[7] = "O";
+                        legit = true;
+                        TurnWithBot = false;
+                        break;
+                    }
 
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == "X" & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == "X" & b.board[8] == "O")
+                    if (b.board[0] == " " & b.board[4] == "O" & b.board[8] == "O")
                     {
                         b.board[0] = "O";
                         legit = true;
@@ -514,79 +391,7 @@ class player
                         break;
                     }
 
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "X" &
-                        b.board[6] == "O" & b.board[7] == "X" & b.board[8] == "X")
-                    {
-                        b.board[2] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == "X" & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == "O" & b.board[8] == "X")
-                    {
-                        b.board[1] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "X" &
-                        b.board[6] == "X" & b.board[7] == "O" & b.board[8] == "X")
-                    {
-                        b.board[1] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "X" & b.board[1] == "X" & b.board[2] == " " &
-                        b.board[3] == "X" & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "O" & b.board[7] == " " & b.board[8] == " ")
-                    {
-                        b.board[2] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == "X" & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "X" &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
-                    {
-                        b.board[8] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "X" & b.board[1] == "X" & b.board[2] == " " &
-                        b.board[3] == "O" & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == " " & b.board[8] == " ")
-                    {
-                        b.board[2] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "X" & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == "O" & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == "X" & b.board[8] == " ")
-                    {
-                        b.board[8] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == " " & b.board[1] == "X" & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "O" &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == "X")
+                    if (b.board[0] == " " & b.board[4] == "X" & b.board[8] == "X")
                     {
                         b.board[0] = "O";
                         legit = true;
@@ -594,19 +399,23 @@ class player
                         break;
                     }
 
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "O" &
-                        b.board[6] == " " & b.board[7] == "X" & b.board[8] == "X")
+                    if (b.board[0] == "O" & b.board[4] == " " & b.board[8] == "O")
                     {
-                        b.board[1] = "O";
+                        b.board[4] = "O";
                         legit = true;
                         TurnWithBot = false;
                         break;
                     }
 
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == "X" & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == "X" & b.board[8] == " ")
+                    if (b.board[0] == "X" & b.board[4] == " " & b.board[8] == "X")
+                    {
+                        b.board[4] = "O";
+                        legit = true;
+                        TurnWithBot = false;
+                        break;
+                    }
+
+                    if (b.board[0] == "O" & b.board[4] == "O" & b.board[8] == " ")
                     {
                         b.board[8] = "O";
                         legit = true;
@@ -614,210 +423,7 @@ class player
                         break;
                     }
 
-
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == "O" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "X" &
-                        b.board[6] == " " & b.board[7] == "X" & b.board[8] == "X")
-                    {
-                        b.board[6] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == "X" & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "X" & b.board[5] == "X" &
-                        b.board[6] == " " & b.board[7] == "O" & b.board[8] == " ")
-                    {
-                        b.board[3] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == "X" & b.board[2] == " " &
-                        b.board[3] == "X" & b.board[4] == "X" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == "O" & b.board[8] == " ")
-                    {
-                        b.board[5] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == "O" & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "X" & b.board[5] == "X" &
-                        b.board[6] == " " & b.board[7] == "X" & b.board[8] == " ")
-                    {
-                        b.board[3] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == "O" & b.board[2] == " " &
-                        b.board[3] == "X" & b.board[4] == "X" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == "X" & b.board[8] == " ")
-                    {
-                        b.board[2] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == " " & b.board[1] == "X" & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "X" &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == "O")
-                    {
-                        b.board[0] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == "O" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "X" &
-                        b.board[6] == " " & b.board[7] == "X" & b.board[8] == "X")
-                    {
-                        b.board[6] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == " " & b.board[1] == "X" & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "O" &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == "X")
-                    {
-                        b.board[3] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "O" &
-                        b.board[6] == " " & b.board[7] == "X" & b.board[8] == "X")
-                    {
-                        b.board[3] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == "X" & b.board[4] == "X" & b.board[5] == "O" &
-                        b.board[6] == "X" & b.board[7] == " " & b.board[8] == " ")
-                    {
-                        b.board[2] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == "X" &
-                        b.board[3] == "X" & b.board[4] == "X" & b.board[5] == "O" &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
-                    {
-                        b.board[6] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == "X" & b.board[4] == "X" & b.board[5] == "O" &
-                        b.board[6] == " " & b.board[7] == "X" & b.board[8] == " ")
-                    {
-                        b.board[1] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == "X" & b.board[2] == " " &
-                        b.board[3] == "X" & b.board[4] == "X" & b.board[5] == "O" &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
-                    {
-                        b.board[7] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == "X" & b.board[2] == " " &
-                        b.board[3] == "O" & b.board[4] == "X" & b.board[5] == "X" &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
-                    {
-                        b.board[6] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == "O" & b.board[4] == "X" & b.board[5] == "X" &
-                        b.board[6] == " " & b.board[7] == "X" & b.board[8] == " ")
-                    {
-                        b.board[6] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == "X" &
-                        b.board[3] == "O" & b.board[4] == "X" & b.board[5] == "X" &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
-                    {
-                        b.board[6] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == "O" & b.board[4] == "X" & b.board[5] == "X" &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == "X")
-                    {
-                        b.board[6] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == "X" & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == "X" & b.board[8] == "O")
-                    {
-                        b.board[0] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "X" & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == "X" & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == "X" & b.board[8] == "O")
-                    {
-                        b.board[6] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "X" &
-                        b.board[6] == "O" & b.board[7] == "X" & b.board[8] == "X")
-                    {
-                        b.board[2] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "X" &
-                        b.board[6] == "O" & b.board[7] == "X" & b.board[8] == " ")
+                    if (b.board[0] == "X" & b.board[4] == "X" & b.board[8] == " ")
                     {
                         b.board[8] = "O";
                         legit = true;
@@ -825,80 +431,39 @@ class player
                         break;
                     }
 
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == "X" & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == "O" & b.board[8] == "X")
+                    if (b.board[2] == " " & b.board[4] == "O" & b.board[6] == "O")
                     {
-                        b.board[1] = "O";
+                        b.board[2] = "O";
                         legit = true;
                         TurnWithBot = false;
                         break;
                     }
 
-                    if (b.board[0] == " " & b.board[1] == "X" & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == "O" & b.board[8] == "X")
+                    if (b.board[2] == " " & b.board[4] == "X" & b.board[6] == "X")
                     {
-                        b.board[3] = "O";
+                        b.board[2] = "O";
                         legit = true;
                         TurnWithBot = false;
                         break;
                     }
 
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "X" &
-                        b.board[6] == "X" & b.board[7] == "O" & b.board[8] == "X")
+                    if (b.board[2] == "O" & b.board[4] == " " & b.board[6] == "O")
                     {
-                        b.board[1] = "O";
+                        b.board[4] = "O";
                         legit = true;
                         TurnWithBot = false;
                         break;
                     }
 
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == "O" & b.board[8] == "X")
+                    if (b.board[2] == "X" & b.board[4] == " " & b.board[6] == "X")
                     {
-                        b.board[1] = "O";
+                        b.board[4] = "O";
                         legit = true;
                         TurnWithBot = false;
                         break;
                     }
 
-                    if (b.board[0] == "X" & b.board[1] == "O" & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "X" &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == " ")
-                    {
-                        b.board[7] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    
-                    if (b.board[0] == "X" & b.board[1] == "O" & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == "X")
-                    {
-                        b.board[7] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "X" & b.board[1] == "O" & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == " " & b.board[8] == " ")
-                    {
-                        b.board[7] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    } 
-                    
-                    if (b.board[0] == "O" & b.board[1] == "X" & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "X" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == "O" & b.board[8] == " ")
+                    if (b.board[2] == "O" & b.board[4] == "O" & b.board[6] == " ")
                     {
                         b.board[6] = "O";
                         legit = true;
@@ -906,9 +471,7 @@ class player
                         break;
                     }
 
-                    if (b.board[0] == "O" & b.board[1] == "O" & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "X" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == "X" & b.board[8] == " ")
+                    if (b.board[2] == "X" & b.board[4] == "X" & b.board[6] == " ")
                     {
                         b.board[6] = "O";
                         legit = true;
@@ -916,29 +479,39 @@ class player
                         break;
                     }
 
-                    if (b.board[0] == "O" & b.board[1] == "O" & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "X" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == "X" & b.board[8] == " ")
+                    if (b.board[0] == "O" & b.board[3] == "O" & b.board[6] == " ")
                     {
-                        b.board[2] = "O";
+                        b.board[6] = "O";
                         legit = true;
                         TurnWithBot = false;
                         break;
                     }
 
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == "O" & b.board[4] == "X" & b.board[5] == "X" &
-                        b.board[6] == "X" & b.board[7] == " " & b.board[8] == " ")
+                    if (b.board[0] == "X" & b.board[3] == "X" & b.board[6] == " ")
                     {
-                        b.board[2] = "O";
+                        b.board[6] = "O";
                         legit = true;
                         TurnWithBot = false;
                         break;
                     }
 
-                    if (b.board[0] == "X" & b.board[1] == "X" & b.board[2] == "O" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == " " & b.board[8] == " ")
+                    if (b.board[0] == " " & b.board[3] == "O" & b.board[6] == "O")
+                    {
+                        b.board[0] = "O";
+                        legit = true;
+                        TurnWithBot = false;
+                        break;
+                    }
+
+                    if (b.board[0] == " " & b.board[3] == "X" & b.board[6] == "X")
+                    {
+                        b.board[0] = "O";
+                        legit = true;
+                        TurnWithBot = false;
+                        break;
+                    }
+
+                    if (b.board[0] == "O" & b.board[3] == " " & b.board[6] == "O")
                     {
                         b.board[3] = "O";
                         legit = true;
@@ -946,28 +519,7 @@ class player
                         break;
                     }
 
-                    if (b.board[0] == "O" & b.board[1] == "X" & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == "X")
-                    {
-                        b.board[5] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "O" & b.board[7] == "X" & b.board[8] == "X")
-                    {
-                        b.board[5] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-                    if (b.board[0] == "X" & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == "X" & b.board[8] == "O")
+                    if (b.board[0] == "X" & b.board[3] == " " & b.board[6] == "X")
                     {
                         b.board[3] = "O";
                         legit = true;
@@ -975,19 +527,71 @@ class player
                         break;
                     }
 
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == " " &
-                        b.board[6] == "O" & b.board[7] == "X" & b.board[8] == "X")
+                    if (b.board[1] == "O" & b.board[4] == "O" & b.board[7] == " ")
                     {
-                        b.board[5] = "O";
+                        b.board[7] = "O";
                         legit = true;
                         TurnWithBot = false;
                         break;
                     }
 
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == " " &
-                        b.board[3] == " " & b.board[4] == "X" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == " " & b.board[8] == " ")
+                    if (b.board[1] == "X" & b.board[4] == "X" & b.board[7] == " ")
+                    {
+                        b.board[7] = "O";
+                        legit = true;
+                        TurnWithBot = false;
+                        break;
+                    }
+
+                    if (b.board[1] == " " & b.board[4] == "O" & b.board[7] == "O")
+                    {
+                        b.board[1] = "O";
+                        legit = true;
+                        TurnWithBot = false;
+                        break;
+                    }
+
+                    if (b.board[1] == " " & b.board[4] == "X" & b.board[7] == "X")
+                    {
+                        b.board[1] = "O";
+                        legit = true;
+                        TurnWithBot = false;
+                        break;
+                    }
+
+                    if (b.board[1] == "O" & b.board[4] == " " & b.board[7] == "O")
+                    {
+                        b.board[4] = "O";
+                        legit = true;
+                        TurnWithBot = false;
+                        break;
+                    }
+
+                    if (b.board[1] == "X" & b.board[4] == " " & b.board[7] == "X")
+                    {
+                        b.board[4] = "O";
+                        legit = true;
+                        TurnWithBot = false;
+                        break;
+                    }
+
+                    if (b.board[2] == "O" & b.board[5] == "O" & b.board[8] == " ")
+                    {
+                        b.board[8] = "O";
+                        legit = true;
+                        TurnWithBot = false;
+                        break;
+                    }
+
+                    if (b.board[2] == "X" & b.board[5] == "X" & b.board[8] == " ")
+                    {
+                        b.board[8] = "O";
+                        legit = true;
+                        TurnWithBot = false;
+                        break;
+                    }
+
+                    if (b.board[2] == " " & b.board[5] == "O" & b.board[8] == "O")
                     {
                         b.board[2] = "O";
                         legit = true;
@@ -995,66 +599,29 @@ class player
                         break;
                     }
 
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == "O" &
-                        b.board[3] == "X" & b.board[4] == "X" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == " " & b.board[8] == " ")
+                    if (b.board[2] == " " & b.board[5] == "X" & b.board[8] == "X")
                     {
-                        b.board[1] = "O";
+                        b.board[2] = "O";
                         legit = true;
                         TurnWithBot = false;
                         break;
                     }
 
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == "O" &
-                        b.board[3] == " " & b.board[4] == "X" & b.board[5] == "X" &
-                        b.board[6] == "X" & b.board[7] == " " & b.board[8] == " ")
+                    if (b.board[2] == "O" & b.board[5] == " " & b.board[8] == "O")
                     {
-                        b.board[1] = "O";
+                        b.board[5] = "O";
                         legit = true;
                         TurnWithBot = false;
                         break;
                     }
 
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == "O" &
-                        b.board[3] == " " & b.board[4] == "X" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == "X" & b.board[8] == " ")
+                    if (b.board[2] == "X" & b.board[5] == " " & b.board[8] == "X")
                     {
-                        b.board[1] = "O";
+                        b.board[5] = "O";
                         legit = true;
                         TurnWithBot = false;
                         break;
                     }
-
-                    if (b.board[0] == "O" & b.board[1] == " " & b.board[2] == "O" &
-                        b.board[3] == " " & b.board[4] == "X" & b.board[5] == " " &
-                        b.board[6] == "X" & b.board[7] == " " & b.board[8] == "X")
-                    {
-                        b.board[1] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == "X" & b.board[1] == " " & b.board[2] == "X" &
-                        b.board[3] == "O" & b.board[4] == "O" & b.board[5] == "O" &
-                        b.board[6] == " " & b.board[7] == " " & b.board[8] == "X")
-                    {
-                        b.board[1] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
-                    if (b.board[0] == " " & b.board[1] == " " & b.board[2] == "X" &
-                        b.board[3] == " " & b.board[4] == "O" & b.board[5] == "O" &
-                        b.board[6] == "X" & b.board[7] == " " & b.board[8] == "X")
-                    {
-                        b.board[3] = "O";
-                        legit = true;
-                        TurnWithBot = false;
-                        break;
-                    }
-
 
                     else if (b.board[sele] == "X" || b.board[sele] == "O")
                     {
@@ -1062,6 +629,8 @@ class player
                         break;
 
                     }
+
+
                     else
                     {
                         b.board[sele] = "O";
