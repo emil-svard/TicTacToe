@@ -9,7 +9,7 @@ using System.Threading.Tasks;
         static void Main()
         {
            Board b = new Board();
-
+           
             b.played();
 
 

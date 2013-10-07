@@ -9,7 +9,7 @@ class Board
 {
    
     public List<string> board = new List<string> { " ", " ", " ", " ", " ", " ", " ", " ", " " }; //Group didnt want to do in FORMS
-    static player p = new player();
+    player p = new player();
     
 
     public void Theboard()
@@ -70,52 +70,27 @@ class Board
                 if (p.turn == false || p.TurnWithBot == false)
                 {
 
-              
                     p.plays1();
-
                     p.Win();
-                    
-                        
-                    
-
                     p.Draw();
-                    
-                        
-                    
                     
                 }
 
                 if (p.turn == true & p.against == "1")
                 {
 
-
                     p.plays2();
-
                     p.Win();
-                    
-                        
-                    
-
                     p.Draw();
-                    
-                        
-                    
                 }
 
                 if (p.TurnWithBot == true & p.against == "2")
                 {
 
-
                     p.bot1();
-
                     p.Win();
-
-
-
                     p.Draw();
-                    
 
-                    
                 }
         }
       }
