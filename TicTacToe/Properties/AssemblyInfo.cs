@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("TicTacToe")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Caperio AB")]
+[assembly: AssemblyCompany("Microsoft")]
 [assembly: AssemblyProduct("TicTacToe")]
-[assembly: AssemblyCopyright("Copyright © Caperio AB 2013")]
+[assembly: AssemblyCopyright("Copyright © Microsoft 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a95d7320-1d30-4faa-982b-001a1d412f48")]
+[assembly: Guid("ba9159c8-70bf-49ad-9e2b-511c89ff760a")]
 
 // Version information for an assembly consists of the following four values:
 //
