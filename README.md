@@ -1,4 +1,4 @@
-TicTackToe
+TicTacToe
 ==========
 
 A TicTacToe game.
